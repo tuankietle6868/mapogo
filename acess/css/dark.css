@@ -510,6 +510,9 @@ section {
     padding: 0 4%; }
     .home__bg {
       margin-left: -4% !important; }
+    .home__lightDark {
+      width: 110px;
+      height: 110px; }
 
   .social {
     margin-top: 20px; }
