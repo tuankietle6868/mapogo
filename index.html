@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPOGO</title>
+
+    <link id="theme-link" rel="stylesheet" href="./acess/css/light.css" />
+
+    <!-- Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="logo">LOGO <span class="animate"></span></a>
+        <div class="bx bx-menu" id="menu-icon">
+            <span class="animate"></span>
+        </div>
+        <nav class="navbar">
+            <a href="#">What we offer</a>
+            <a href="#" onclick="modal()">Our Story</a>
+            <a href="https://the-mapogo-lion.gitbook.io/the-mapogo-lion-coalition" target="_blank" rel="noopener noreferrer">Tutorial</a>
+            <a href="#">Flagship</a>
+            <a href="/rewards.html">Rewards</a>
+            <a href="https://t.me/mapgo_testing_app_bot/myapp2?startapp=5294003492" class="navbar__btn">Play MAPGO</a>
+
+            <span class="active-nav"></span>
+        </nav>
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Ourstory -->
+    <section class="ourstory" id="ourstory">
+        <div class="ourstory__video animate">
+            <div class="ourstory__video__exit" onclick="videoExit()"><div class="bx bx-x" ></div></div>
+            <iframe 
+                id="youtube"
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/UA2v48cL2Bw?si=vxOsJZ1zmoVSaG2v" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- End Ourstory -->
+
+    <!-- Home -->
+    <section class="home">
+        <div class="home__bg">
+            <img src="./acess/images/home-bg.png" alt="background" />
+        </div>
+        <div class="home__lightDark">
+            <img id="light" src="./acess/images/sun.png" alt="sun" onclick="mode()" />
+            <img id="dark" src="./acess/images/moon.png" alt="moon" onclick="mode()" />
+        </div>
+        <div class="home__content">
+            <h1>What is MAPOGO</h1>
+            <p>
+                MAPOGO is a unique Telegram app that connects decentralized social networks with Web3.
+            </p>
+
+            <div class="btn-box">
+                <a href="#" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="home__img">
+            <img src="./acess/images/lion.png" alt="lion" />
+        </div>
+
+    </section>
+    <!-- End Home -->
+
+    <!-- What We Offer -->
+    <section class="whatweoffer">
+        <div class="whatweoffer__maxwidth">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum itaque esse quis veritatis. Ipsam voluptas, corporis excepturi debitis placeat esse deserunt amet ut deleniti.
+            </p>
+            <div class="whatweoffer__row">
+                <div class="whatweoffer__col">
+                    <div class="card">
+                        <div class="card__subtitle">ADVISE</div>
+                        <div class="card__title">SC Advisory</div>
+                        <p class="card__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores culpa, consequatur sapiente qui quo tenetur minus harum quaerat sunt libero reprehenderit voluptate nisi possimus, unde quibusdam. Adipisci praesentium molestias illo?</p>
+                        <div class="card__line"></div>
+                    </div>
+                </div>
+                <div class="whatweoffer__col">
+                    <div class="card">
+                        <div class="card__subtitle">INVEST</div>
+                        <div class="card__title">SC Investor network</div>
+                        <p class="card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sint expedita veritatis quos sed voluptates, delectus vitae modi quo illum consequatur numquam sapiente repellendus eaque iure animi dolores, voluptatem quibusdam.</p>
+                        <div class="card__line"></div>
+                    </div>
+                </div>
+                <div class="whatweoffer__col">
+                    <div class="card">
+                        <div class="card__subtitle">BUILD</div>
+                        <div class="card__title">SC Labs</div>
+                        <p class="card__content">Lorem ipsum dodasdasdasdlor dodasdasdasdlor dodasdasdasdlor dodasdasdasdlor dodasdasdasdlor dodasdasdasdlor dodasdasdasdlor  dodasdasdasdlorsit amet consectetur adipisicing elit. Possimus fugiat repellendus nam esse omnis nisi? Corrupti alias illum assumenda, maxime reprehenderit blanditiis totam consectetur dignissimos voluptates possimus ipsam commodi fugit!</p>
+                        <div class="card__line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End What We Offer -->
+
+    <!-- Flagship -->
+    <section class="flagship">
+        <div class="flagship__title">
+                Flagship
+        </div>
+        <div class="flagship__content">
+            <div class="flagship__content__col">
+                <div class="number">31.396.804</div>
+                <div class="text">Total Seedizens</div>
+                <div class="line"></div>
+            </div>
+            <div class="flagship__content__col">
+                <div class="number">31.396.804</div>
+                <div class="text">COMPLETED missions</div>
+                <div class="line"></div>
+            </div>
+            <div class="flagship__content__col">
+                <div class="number">31.396.804</div>
+                <div class="text">Online Seedizens</div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Flagship -->
+
+    <!-- Social -->
+    <section class="social">
+        <div class="social__title">
+            <h1>MAPGO Combinator</h1>
+        </div>
+        <div class="social__row">
+            <a class="btn-box" href="#">
+                <img src="./acess/images/icon/telegram.png" alt="telegram" />
+                TELEGRAM
+            </a>
+            <a class="btn-box" href="#">
+                <img src="./acess/images/icon/twitter.png" alt="twitter" />
+                TWITTER
+            </a>
+            <a class="btn-box" href="#">
+                <img src="./acess/images/icon/youtube.png" alt="youtube" />
+                YOUTUBE
+            </a>
+        </div>
+    </section>
+    <!-- End Social -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 | All Rights Reserved.</p>
+
+            <span class="animate scroll"></span>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bxs-up-arrow' ></i></a>
+
+            <span class="animate scroll"></span>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="./acess/js/main.js"></script>
+
+</body>
+</html>
