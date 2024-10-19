@@ -7,30 +7,10 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-// Theme mode light & dark
-// let theme        = document.getElementById('theme');
-// let themeRewards = document.getElementById('themeRewards');
-// let light        = document.getElementById('light');
-// let dark         = document.getElementById('dark');
-// // Check 
-
-// function setTheme() {
-//     if (isDarkMode == 'light') {
-//         theme.href          = './acess/css/dark.css';
-//         themeRewards.href   = './acess/css/dark.css';
-//         light.style.display = 'block';
-//         dark.style.display  = 'none';
-//         localStorage.setItem('theme', 'dark');
-//     } else {
-//         theme.href          = './acess/css/light.css';
-//         themeRewards.href   = './acess/css/light.css';
-//         light.style.display = 'none';
-//         dark.style.display  = 'block';
-//         localStorage.setItem('theme', 'light');
-//     }
-// }
+// Them light & dark
 
 const themeLink = document.getElementById('theme-link');
+const bgStar    = document.getElementById('bgStar');
 
 let isDarkMode = localStorage.getItem('theme') === 'dark';
 setTheme(isDarkMode ? 'dark' : 'light');
@@ -39,12 +19,13 @@ setTheme(isDarkMode ? 'dark' : 'light');
 function mode() {
     isDarkMode = !isDarkMode;
     setTheme(isDarkMode ? 'dark' : 'light');
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Lưu trạng thái vào localStorage
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 };
 
-// Hàm thiết lập giao diện theo theme
+// Setup interface theme
 function setTheme(theme) {
     themeLink.href = theme === 'dark' ? './acess/css/dark.css' : './acess/css/light.css';
+    bgStar.href    = theme === 'dark' ? './acess/css/bg-star.css' : '';
 }
 
 // iframe Youtube

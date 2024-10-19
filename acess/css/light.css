@@ -21,10 +21,10 @@ body {
 /* =====> Header <===== */
 .header {
   position: relative;
-  top: 100px;
+  top: 89px;
   left: 0;
   width: 100%;
-  margin-top: -100px;
+  margin-top: -89px;
   padding: 20px 7%;
   background: transparent;
   display: flex;
@@ -269,6 +269,77 @@ section {
             border-radius: 2px; }
 
 /* =====> End What We Offer <===== */
+/* =====>Roadmap <===== */
+.roadmap {
+  padding: 60px 20px;
+  background: #f2ffe0;
+  text-align: center; }
+  .roadmap__title {
+    font-size: 46px;
+    color: #582927;
+    margin-bottom: 50px; }
+  .roadmap__timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0; }
+    .roadmap__timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: #facd65;
+      transform: translateX(-50%); }
+  .roadmap__item {
+    width: 50%;
+    padding: 20px;
+    position: relative; }
+    .roadmap__item--left {
+      left: 0;
+      text-align: right; }
+    .roadmap__item--right {
+      left: 50%; }
+    .roadmap__item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 15px;
+      height: 15px;
+      background: #facd65;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+    .roadmap__item--left::before {
+      right: -8px; }
+    .roadmap__item--right::before {
+      left: -8px; }
+  .roadmap__content {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    .roadmap__content h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      color: #582927; }
+    .roadmap__content p {
+      margin: 0 0 10px;
+      color: #582927; }
+  .roadmap__phase {
+    font-weight: bold;
+    color: #582927; }
+  .roadmap__description {
+    font-size: 1rem;
+    color: #582927; }
+  .roadmap__date {
+    display: block;
+    font-weight: bold;
+    color: #fac042;
+    margin-top: 10px; }
+
+/* =====> End Roadmap <===== */
 /* =====> Flagship <===== */
 .flagship {
   position: relative;
@@ -499,11 +570,6 @@ section {
     height: 50px;
     box-shadow: 0px 5px 2px 4px rgba(165, 45, 5, 0.8); }
 
-  .home__img img {
-    width: 100%;
-    height: 80%;
-    margin: 0 auto; }
-
   .whatweoffer__maxwidth .whatweoffer__row .whatweoffer__col .card__content {
     font-size: 16px;
     display: -webkit-box;
@@ -733,8 +799,8 @@ section {
     .home__bg {
       margin-left: 0 !important; }
     .home__lightDark {
-      top: 30%;
-      right: 44px;
+      top: 35%;
+      right: 40px;
       width: 120px;
       height: 120px;
       z-index: 1; }

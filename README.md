@@ -1,0 +1,3 @@
+### The Mapogo lion coalition ###
+
+MAPOGO is a unique Telegram app that connects decentralized social networks with Web3. In the world of MAPOGO, you’ll have a special companion – a lion pet. Your mission is to take care of your lion by keeping it well-fed. But to get food, you need to embark on thrilling hunts! Dive into a world where hunting instincts meet social connections, and become a skilled hunter in your journey.

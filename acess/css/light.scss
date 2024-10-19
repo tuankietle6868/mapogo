@@ -1,0 +1,1275 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,300;1,400;1,500;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+$bg-color: #f2ffe0;
+$second-bg-color: #facd65;
+$text-color: #582927;
+$main-color: #fac042;
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: $bg-color;
+    color: $text-color;
+}
+
+/* =====> Header <===== */
+.header {
+    position: relative;
+    top: 89px;
+    left: 0;
+    width: 100%;
+    margin-top: -89px;
+    padding: 20px 7%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s;
+    z-index: 100;
+    .sticky {
+        background: $second-bg-color;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 28px;
+        color: $text-color;
+        font-weight: 600;
+    }
+}
+
+.navbar {
+    position: relative;
+    &__btn,
+    a {
+        font-size: 20px;
+        color: $text-color;
+        font-weight: 600;
+        margin-left: 35px;
+        transition: .3s;
+        &:hover,
+        &.active {
+            color: $main-color;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        background: linear-gradient(107deg, rgb(255, 67, 5) 11.1%, rgb(245, 135, 0) 95.3%);
+        color: $bg-color !important;
+        padding: 10px 5px;
+        width: 140px;
+        height: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 6px 3px 5px rgba(165, 45, 5, .8);
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            color: $bg-color;
+            box-shadow: 0px 0px 0px 0px transparent;
+            transform: translateY(5px);
+        }
+    }
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 36px;
+    color: $text-color;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 10px 7% 20px;
+}
+/* =====> End Header <===== */
+
+/* =====> Home <===== */
+.home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 7%;
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        margin-left: -7%;
+        z-index: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__lightDark {
+        position: absolute;
+        top: 115px;
+        right: 44px;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: .5s;
+        z-index: 1;
+        #light {
+            display: block;
+        }
+        #dark {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            background: $second-bg-color;
+            scale: .9;
+            box-shadow: 0 0 25px 10px $main-color;
+        }
+    }
+    &__content {
+        max-width: 50%;
+        h1 {
+            position: relative;
+            display: inline-block;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+    
+        p {
+            position: relative;
+            font-size: 16px;
+            margin: 20px 0 40px;
+        }
+    }
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    .btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background: linear-gradient(107deg, rgb(255, 67, 5) 11.1%, rgb(245, 135, 0) 95.3%);
+        border: .20px solid $main-color;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $bg-color;
+        overflow: hidden;
+        transition: .5s;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $bg-color;
+            transition: .4s;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+.home__img {
+    display: flex;
+    position: relative;
+    max-width: 50%;
+    img {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* =====> End Home <===== */
+
+/* =====> Ourstory <===== */
+.ourstory {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    transition: .3s;
+    z-index: 999;
+    &__video {
+        background: #000;
+        width: 80%;
+        height: 80%;
+        margin: 80px auto;
+        padding: 20px;
+        border: 3px solid $bg-color;
+        border-radius: 24px;
+        &__exit {
+            display: none;
+        }
+    }
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+    }
+        
+    @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+    }
+}
+
+
+/* =====> End Oustory <===== */
+
+/* =====> What We Offer <===== */
+
+.whatweoffer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &__maxwidth {
+        max-width: 1200px;
+        padding: 50px 0;
+        p {
+            text-align: center;
+            font-size: 30px;
+        }
+        .whatweoffer__row {
+            display: flex;
+            width: 100%;
+            margin-top: 50px;
+            .whatweoffer__col {
+                width: 33.3333%;
+                height: 500px;
+                padding: 20px;
+                .card {
+                    position: relative;
+                    background: #fff;
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px;
+                    text-align: center;
+                    border-radius: 38px 0px 38px 0px;
+                    border: 1px solid $main-color;
+                    box-shadow: rgba(245, 135, 0, .4) 5px 5px, rgba(245, 135, 0, .3) 10px 10px, rgba(245, 135, 0, .2) 15px 15px, rgba(245, 135, 0, .1) 20px 20px, rgba(245, 135, 0, .05) 25px 25px;
+                    &__subtitle {
+                        height: auto;
+                        width: 100%;
+                        font-size: 14px;
+                        margin-top: 20px;
+                    }
+                    &__title {
+                        width: 100%;
+                        font-size: 30px;
+                        margin: 28px 0;
+                    }
+                    &__content {
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 10;
+                                line-clamp: 10; 
+                        -webkit-box-orient: vertical;
+                    }
+                    &__line {
+                        position: absolute;
+                        left: 15px;
+                        bottom: 25px;
+                        width: 85px;
+                        border: 2px solid $main-color;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =====> End What We Offer <===== */
+
+/* =====>Roadmap <===== */
+.roadmap {
+    padding: 60px 20px;
+    background: $bg-color;
+    text-align: center;
+  
+    &__title {
+        font-size: 46px;
+        color: $text-color;
+        margin-bottom: 50px;
+    }
+  
+    &__timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px 0;
+  
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: $second-bg-color;
+            transform: translateX(-50%);
+        }
+    }
+  
+    &__item {
+        width: 50%;
+        padding: 20px;
+        position: relative;
+  
+        &--left {
+            left: 0;
+            text-align: right;
+        }
+  
+        &--right {
+            left: 50%;
+        }
+  
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            background: $second-bg-color;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    
+        &--left::before {
+            right: -8px;
+        }
+    
+        &--right::before {
+            left: -8px;
+        }
+    }
+  
+    &__content {
+        background: #fff;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: $text-color;
+        }
+    
+        p {
+            margin: 0 0 10px;
+            color: $text-color;
+        }
+    }
+  
+    &__phase {
+        font-weight: bold;
+        color: $text-color;
+    }
+  
+    &__description {
+        font-size: 1rem;
+        color: $text-color;
+    }
+  
+    &__date {
+        display: block;
+        font-weight: bold;
+        color: $main-color;
+        margin-top: 10px;
+    }
+}
+/* =====> End Roadmap <===== */
+
+/* =====> Flagship <===== */
+.flagship {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 30px;
+    &__title {
+        text-align: center;
+        width: 100%;
+        height: 120px;
+        font-size: 46px;
+        font-weight: 600;
+    }
+    
+    &__content {
+        width: 100%;
+        &__col {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            .number {
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .text {
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+            .line {
+                position: relative;
+                margin: 0 auto;
+                width: 30%;
+                border: 1px solid $second-bg-color;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $text-color;
+                    top: -7.5px;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    box-shadow: 3px 3px $main-color;
+                }
+            }
+        }
+    }
+}
+
+/* =====> End Flagship <===== */
+
+/* =====> Social <===== */
+.social {
+    width: 100%;
+    min-height: 50vh;
+    text-align: center;
+    margin-top: 30px;
+    background: $second-bg-color;
+    &__title {
+        margin-top: 50px;
+        font-size: 78px;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .btn-box {
+            width: 150px;
+            height: 50px;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid $text-color;
+            font-size: 20px;
+            border-radius: 15px;
+            color: $text-color;
+            cursor: pointer;
+            transition: .3s;
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            }
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}
+/* =====> End Social <===== */
+
+/* =====> Footer <===== */
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    background: $second-bg-color;
+    &-text, 
+    &-iconTop {
+        position: relative;
+    }
+    &-text p {
+        font-size: 16px;
+    }
+    &-iconTop a {
+        position: absolute;
+        bottom: -20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        background: $main-color;
+        border: .20px solid $main-color;
+        border-radius: 6px;
+        overflow: hidden;
+        z-index: 1;
+    }
+    &-iconTop a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $bg-color;
+        transition: .5s;
+        z-index: -1;
+    }
+    &-iconTop a:hover::before {
+        width: 100%;
+    }
+    &-iconTop a i {
+        font-size: 24px;
+        color: $bg-color;
+        transition: .5s;
+    }
+    &-iconTop a:hover i {
+        color: $main-color;
+    }
+}
+/* =====> End Footer <===== */
+
+/* ==========> Rewards <========== */
+.homeRewards {
+    min-height: 100vh;
+    margin-top: 100px;
+    padding: 100px 20% 20px;
+    &__nav {
+        display: flex;
+        margin-bottom: 73px;
+        text-transform: uppercase;
+        &__title {
+            font-size: 20px;
+            span {
+                opacity: .6;
+            }
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 24px;
+        h1 {
+            color: $text-color;
+            font-size: 76px;
+            line-height: 106px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        p {
+            color: $text-color;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-box .btn {
+            width: 175px;
+        }
+    }
+}
+/* ==========> End Rewards <========== */
+
+/* ==========> End Mertit <========== */
+.merit {
+    min-height: 100vh;
+    &__bg {
+        display: flex;
+        background: #f3e7ac;
+        width: 100%;
+        padding: 200px 20px;
+        justify-content: center;
+        border-radius: 20px;
+        gap: 110px;
+    }
+    
+    &__img {
+        max-width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        max-width: 50%;
+        width: 50%;
+        height: 100%;
+        padding: 10px 20px;
+        h5 {
+            margin: 24px 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        h1 {
+            position: relative;
+            display: inline-block;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+    }
+}
+
+/* ==========> End Mertit <========== */
+
+/* ==========> Reference <========== */
+.reference {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    &__rank {
+        max-width: 33.33%;
+        padding: 0 10px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        h6 {
+            margin: 24px 0 16px 0;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        h5 {
+            font-size: 26px;
+            font-weight: 400;
+        }
+    }
+}
+
+/* ==========> End Reference <========== */
+
+/* ==========> Resposive <========== */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .navbar {
+        &__btn,
+        a {
+            font-size: 18px;
+            color: $text-color;
+            font-weight: 600;
+            margin-left: 24px;
+            transition: .3s;
+            &:hover,
+            &.active {
+                color: $main-color;
+            }
+        }
+        &__btn {
+            padding: 12px 5px;
+            width: 125px;
+            height: 50px;
+            box-shadow: 0px 5px 2px 4px rgba(165, 45, 5, .8);
+        }
+    }
+    
+    .whatweoffer {
+        &__maxwidth {
+            .whatweoffer__row {
+                .whatweoffer__col {
+                    .card {
+                        &__content {
+                            font-size: 16px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                                    line-clamp: 6; 
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        &__title {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 20px 4%;
+    }
+
+    section {
+        padding: 10rem 4% 20px;
+    }
+
+    .home {
+        padding: 0 4%;
+        &__bg {
+            margin-left: -4% !important;
+        }
+        &__lightDark {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    .social {
+        margin-top: 20px;
+        &__row {
+            .btn-box {
+                width: 130px;
+                height: 45px;
+                margin: 0 10px;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 15px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .whatweoffer {
+        display: flex;
+        &__maxwidth {
+            p {
+                text-align: center;
+                font-size: 30px;
+            }
+            .whatweoffer__row {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 50px;
+                .whatweoffer__col {
+                    width: 100%;
+                    height: 500px;
+                    padding: 20px;
+                    .card {
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px;
+                        text-align: center;
+                        &__subtitle {
+                            height: auto;
+                            width: 100%;
+                            font-size: 14px;
+                            margin-top: 20px;
+                        }
+                        &__title {
+                            font-size: 28px;
+                            margin: 24px 0;
+                        }
+                        &__content {
+                            font-size: 16px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                                    line-clamp: 6; 
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 20px 4%;
+        &-iconTop a {
+            right: 0px;
+        }
+    }
+
+    .homeRewards {
+        min-height: 75vh;
+        margin-top: 50px;
+        padding: 80px 7% 15px;
+        &__nav {
+            margin-bottom: 60px;
+            &__title {
+                font-size: 16px;
+            }
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        &__content {
+            h1 {
+                font-size: 42px;
+                line-height: 68px;
+            }
+            p {
+                font-size: 16px;
+            }
+            
+            .btn-box .btn {
+                font-size: 14px;
+                width: 155px;
+            }
+
+        }
+    }
+
+    .merit {
+        min-height: 75vh;
+        &__bg {
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 80px 30px;
+            gap: 0px;
+            border-radius: 35px;
+        }
+        
+        &__img {
+            width: 50%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        &__content {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            padding: 10px 20px;
+            h5 {
+                margin: 20px 0;
+                font-size: 20px;
+            }
+            h1 {
+                font-size: 46px;
+            }
+        }
+    }
+
+    .reference {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+        &__rank {
+            max-width: 100%;
+            margin-bottom: 76px;
+            h6 {
+                margin: 24px 0 16px 0;
+                font-size: 18px;
+                font-weight: 300;
+            }
+            h5 {
+                font-size: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: $bg-color;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        padding: 10px 4%;
+        background: $main-color;
+        box-shadow: 0 50px 10px rgba(0, 0, 0, .2);
+        transition: .25s ease;
+        transition-delay: .25s;
+        z-index: 1;
+        
+        &.active {
+            left: 0;
+            transition-delay: 0s;
+        }
+
+        & .active-nav {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: $bg-color;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            transition: .25s ease;
+            transition-delay: 0s;
+            z-index: -1;
+        }
+    
+        &.active .active-nav {
+            left: 0;
+            transition-delay: .25s;
+        }
+
+        & a {
+            display: block;
+            font-size: 16px;
+            margin: 16px 0;
+            transform: translateX(-200px);
+            transition: .25s ease;
+            transition-delay: 0s;
+        }
+    
+        &.active a {
+            transform: translate(0);
+            transition-delay: .25s;
+        }
+
+        &__btn {
+            width: 110px;
+            box-shadow: 0px 4px 1px 3px rgba(165, 45, 5, .8);
+            margin: 0 !important;
+            transform: translate(0);
+            transition-delay: .25s;
+            &:hover {
+                transform: translateY(5px) !important;
+            }
+        }
+
+        a,
+        &__btn{
+            font-size: 16px;
+        }
+    }
+
+
+    .ourstory {
+        width: 100%;
+        height: 100vh;
+        &__video {
+            position: relative;
+            width: 100%;
+            height: 80%;
+            margin: 80px auto;
+            padding: 15px;
+            &__exit {
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                width: 24px;
+                height: 24px;
+                background: #fff;
+                border-radius: 24px;
+                cursor: pointer;
+                transition: .3s;
+                .bx {
+                    color: $text-color;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+        
+    }
+
+    .home {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        &__bg {
+            margin-left: 0 !important;
+        }
+        &__lightDark {
+            top: 35%;
+            right: 40px;
+            width: 120px;
+            height: 120px;
+            z-index: 1;
+            &:hover {
+                box-shadow: 0 0 25px 10px $main-color;
+            }
+        }
+        &__content {
+            max-width: 100%;
+            height: 100%;
+            
+            h1 {
+                position: relative;
+                display: inline-block;
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+        
+            p {
+                position: relative;
+                font-size: 16px;
+                margin: 20px 0 40px;
+            }
+        }
+        &__img {
+            max-width: 60%;
+        }
+    }
+    .whatweoffer {
+        &__maxwidth {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .flagship {
+        margin-top: 0;
+        &__content {
+            .line {
+                width: 40%;
+            }
+        }
+    }
+
+    .homeRewards {
+        min-height: 75vh;
+        margin-top: 50px;
+        padding: 60px 4% 15px;
+    }
+}
+
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+
+    .ourstory {
+        width: 100%;
+        height: 100vh;
+        &__video {
+            width: 100%;
+            height: 50%;
+            margin: 25vh auto;
+            padding: 15px;
+        }
+    }
+    .home {
+        &__content h1 {
+            display: flex;
+            flex-direction: column;
+        }
+        .btn-box {
+            justify-content: center;
+        }
+        &__lightDark {
+            top: 50%;
+            right: 44px;
+            width: 110px;
+            height: 110px;
+            z-index: 1;
+            &:hover {
+                box-shadow: 0 0 25px 10px $main-color;
+            }
+        }
+    }
+
+    .flagship {
+        margin-top: 0;
+        &__content {
+            .line {
+                width: 45%;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 462px) {
+    
+    .home {
+        &__content h1 {
+            font-size: 42px;
+        }
+        &__img {
+            max-width: 100%;
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    .whatweoffer {
+        &__maxwidth {
+            .whatweoffer__row {
+                .whatweoffer__col {
+                    width: 100%;
+                    height: 450px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .flagship {
+        margin-top: 0;
+        &__content {
+            .line {
+                width: 70%;
+            }
+        }
+    }
+
+    .social {
+        &__title {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+        }
+        &__row {
+            flex-wrap: wrap;
+            justify-content: center;
+            .btn-box {
+                margin: 5px ;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .footer-iconTop a {
+        margin-bottom: 10px;
+        transform: translateX(50%);
+    }
+
+    .merit {
+        &__bg {
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            padding: 50px 10px;
+        }
+        &__img {
+            max-width: 100%;
+            width: 70%;
+        }
+
+        &__content {
+            padding: 10px 15px;
+
+        }
+    }
+}
+
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 50px;
+    }
+
+    .social {
+        margin-top: 20px;
+        &__title {
+            h1 {
+                font-size: 42px;
+            }
+        }
+        &__row {
+            .btn-box {
+                width: 120px;
+                height: 45px;
+                margin: 10px;
+                padding: 10px;
+                font-size: 14px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+
+    .footer-iconTop a {
+        margin-bottom: 0px;
+        transform: translateX(50%);
+    }
+}

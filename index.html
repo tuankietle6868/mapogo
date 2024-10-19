@@ -7,6 +7,7 @@
     <title>MAPOGO</title>
 
     <link id="theme-link" rel="stylesheet" href="./acess/css/light.css" />
+    <link id="bgStar" rel="stylesheet" href="./acess/css/bg-star.css" />
 
     <!-- Boxicon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
@@ -21,18 +22,28 @@
             <span class="animate"></span>
         </div>
         <nav class="navbar">
-            <a href="#">What we offer</a>
+            <a href="#whatweoffer">What we offer</a>
             <a href="#" onclick="modal()">Our Story</a>
             <a href="https://the-mapogo-lion.gitbook.io/the-mapogo-lion-coalition" target="_blank" rel="noopener noreferrer">Tutorial</a>
-            <a href="#">Flagship</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#flagship">Flagship</a>
             <a href="/rewards.html">Rewards</a>
-            <a href="https://t.me/mapgo_testing_app_bot/myapp2?startapp=5294003492" class="navbar__btn">Play MAPGO</a>
+            <a href="https://t.me/mapgo_testing_app_bot/myapp2?startapp=5294003492" class="navbar__btn" target="_blank" rel="noopener noreferrer">Play MAPGO</a>
 
             <span class="active-nav"></span>
         </nav>
 
     </header>
     <!-- End Header -->
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+    <!-- End Background Animation -->
 
     <!-- Ourstory -->
     <section class="ourstory" id="ourstory">
@@ -76,7 +87,7 @@
     <!-- End Home -->
 
     <!-- What We Offer -->
-    <section class="whatweoffer">
+    <section class="whatweoffer" id="whatweoffer">
         <div class="whatweoffer__maxwidth">
             <p>
                 In the world of MAPOGO, you’ll have a special companion – a lion pet. Your mission is to take care of your lion by keeping it well-fed. But to get food, you need to embark on thrilling hunts! Dive into a world where hunting instincts meet social connections, and become a skilled hunter in your journey.
@@ -111,8 +122,48 @@
     </section>
     <!-- End What We Offer -->
 
+    <!-- Roadmap -->
+    <section class="roadmap" id="roadmap">
+        <h2 class="roadmap__title">Our Roadmap</h2>
+        <div class="roadmap__timeline">
+            <div class="roadmap__item roadmap__item--left">
+                <div class="roadmap__content">
+                    <h3 class="roadmap__phase">Phase 1: Planning</h3>
+                    <p class="roadmap__description">
+                        Market research and product concept development.
+                    </p>
+                    <span class="roadmap__date">Q1 2024</span>
+                </div>
+            </div>
+            <div class="roadmap__item roadmap__item--right">
+                <div class="roadmap__content">
+                    <h3 class="roadmap__phase">Phase 2: Design</h3>
+                    <p class="roadmap__description">
+                        Wireframes, prototypes, and branding guidelines.
+                    </p>
+                    <span class="roadmap__date">Q2 2024</span>
+                </div>
+            </div>
+            <div class="roadmap__item roadmap__item--left">
+                <div class="roadmap__content">
+                    <h3 class="roadmap__phase">Phase 3: Development</h3>
+                    <p class="roadmap__description">Full-stack development and testing.</p>
+                    <span class="roadmap__date">Q3 2024</span>
+                </div>
+            </div>
+            <div class="roadmap__item roadmap__item--right">
+                <div class="roadmap__content">
+                    <h3 class="roadmap__phase">Phase 4: Launch</h3>
+                    <p class="roadmap__description">Launch and marketing campaigns.</p>
+                    <span class="roadmap__date">Q4 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Roadmap -->
+
     <!-- Flagship -->
-    <section class="flagship">
+    <section class="flagship" id="flagship">
         <div class="flagship__title">
                 Flagship
         </div>
@@ -142,21 +193,22 @@
             <h1>MAPGO Combinator</h1>
         </div>
         <div class="social__row">
-            <a class="btn-box" href="#">
+            <a class="btn-box" href="https://t.me/mapogoupdates" target="_blank" rel="noopener noreferrer">
                 <img src="./acess/images/icon/telegram.png" alt="telegram" />
                 TELEGRAM
             </a>
-            <a class="btn-box" href="#">
+            <a class="btn-box" href="https://x.com/MapogoCommunity" target="_blank" rel="noopener noreferrer">
                 <img src="./acess/images/icon/twitter.png" alt="twitter" />
                 TWITTER
             </a>
-            <a class="btn-box" href="#">
+            <a class="btn-box" href="https://www.youtube.com/@MapogoCoin" target="_blank" rel="noopener noreferrer">
                 <img src="./acess/images/icon/youtube.png" alt="youtube" />
                 YOUTUBE
             </a>
         </div>
     </section>
     <!-- End Social -->
+     
 
     <!-- Footer -->
     <footer class="footer">
